@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.3'
 
 gem 'bootstrap-sass', '3.3.7'
 
+gem 'gravatar', '~> 1.0'
+
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
