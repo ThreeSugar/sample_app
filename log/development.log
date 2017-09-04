@@ -3414,3 +3414,173 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/signup" for 127.0.0.1 at 2017-09-04 20:12:51 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZKC86LSf2JxINtbh2Begh/QZ/1Qgfnnye+e6DCOvOuXmMAItg1o69LkhaEDZRESyyEhtFs3sjDRQGEfgjka+6A==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (31.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 687ms (Views: 413.8ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-09-04 20:13:14 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EsxWYrGOyqQbyupXNQvcFLZs2w5TVWYMgsvGQe9OgrlqkLxk7GT5sVtvuK01GVmy/jlkRdgAG6sNguhdPJJ/9Q==", "user"=>{"name"=>"Kelvin Snipe", "email"=>"snipe@snipeme.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "snipe@snipeme.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 272ms (Views: 200.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-09-04 20:13:44 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cvBzj77a9quPRS0UJD2/MRE4JMGSfiNIaoGqBFHYAhIKrJmJ4zDFvs/gf+4kLzqXWW2bihkrXu/lyIQYggT/Xg==", "user"=>{"name"=>"Kelvin Sneeze", "email"=>"snipe@snipem.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "snipe@snipem.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 258ms (Views: 187.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-09-04 20:14:14 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TVcUycuchiqHPuredZuZDYzVkthq5is0ly95M1YOcXw1C/7Plna1P8ebuCR1iRyrxIAtk+GzVpMYZlcvhdKMMA==", "user"=>{"name"=>"Kelvin Sneeze", "email"=>"snipe@snipem.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "snipe@snipem.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kelvin Sneeze"], ["email", "snipe@snipem.com"], ["created_at", "2017-09-04 12:14:14.690448"], ["updated_at", "2017-09-04 12:14:14.690448"], ["password_digest", "$2a$10$bXxpqg.SNnT0PDXOTea0ce.YG8TvtvY7t6iccwhbtq2D2WRVghqFK"]]
+  [1m[35m (50.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 142ms (ActiveRecord: 53.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-04 20:14:14 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 189.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-04 20:14:28 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 178ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-04 20:14:30 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 166ms (Views: 151.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/home" for 127.0.0.1 at 2017-09-04 20:14:32 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=home):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2017-09-04 20:14:52 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 190ms (Views: 173.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/home" for 127.0.0.1 at 2017-09-04 20:14:54 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=home):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/home" for 127.0.0.1 at 2017-09-04 20:15:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=home):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/home" for 127.0.0.1 at 2017-09-04 20:16:45 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=home):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2017-09-04 20:16:50 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 181ms (Views: 165.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2017-09-04 20:17:07 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 175ms (Views: 160.3ms | ActiveRecord: 0.0ms)
+
+
